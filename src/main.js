@@ -1,6 +1,19 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+import { createPinia } from "pinia";
+import vuetify from './plugins/vuetify'
+import hljs from 'highlight.js'
+import CodeEditor from "simple-code-editor";
+import { loadFonts } from './plugins/webfontloader'
+import 'vue-highlight-code/dist/style.css';
 
-createApp(App).use(store).use(router).mount('#app')
+const pinia = createPinia()
+loadFonts()
+
+createApp(App)
+  .use(router)
+  .use(pinia)
+  .use(vuetify)
+  .component('CodeEditor', CodeEditor)
+  .mount('#app')

@@ -1,14 +1,10 @@
-import { createStore } from 'vuex'
+import { ref } from "vue";
+import { defineStore } from "pinia";
 
-export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+export const useModelSetting = defineStore('modelSetting', () => {
+  const apiKey = ref("");
+  const modelName = ref("");
+  const endPoint = ref("")
+
+  return { apiKey, modelName, endPoint }
+});
