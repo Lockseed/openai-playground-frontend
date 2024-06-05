@@ -3696,7 +3696,7 @@ highlight.js@^10.7.1:
   resolved "https://registry.npmmirror.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
   integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
 
-highlight.js@^11.5.1, highlight.js@^11.8.0, highlight.js@^11.9.0:
+highlight.js@^11.8.0, highlight.js@^11.9.0:
   version "11.9.0"
   resolved "https://registry.npmmirror.com/highlight.js/-/highlight.js-11.9.0.tgz#04ab9ee43b52a41a047432c8103e2158a1b8b5b0"
   integrity sha512-fJ7cW7fQGCYAkgv4CPfwFHrfd/cLS4Hau96JuJ+ZTOWhjnhoeN1ub1tFmALm/+lW5z4WCAuAV9bm05AP0mS6Gw==
@@ -6175,14 +6175,6 @@ vue-demi@>=0.14.5, vue-demi@>=0.14.7:
   resolved "https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.8.tgz#00335e9317b45e4a68d3528aaf58e0cec3d5640a"
   integrity sha512-Uuqnk9YE9SsWeReYqK2alDI5YzciATE0r2SkA6iMAtuXvNTMNACJLJEXNXaEy94ECuBe4Sk6RzRU80kjdbIo1Q==
 
-vue-highlight-code@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmmirror.com/vue-highlight-code/-/vue-highlight-code-0.2.0.tgz#238941e63caf78ad5cc7edc657a1b4c13e64017e"
-  integrity sha512-KNDa2QWr2yVxVJYRmcr8/cHUGPoGrwDWNm5P0pos+ZkG0tC5mc1Nb4BpBddL+SNYH24ZV9Bco6iOVSkG9H3K8g==
-  dependencies:
-    highlight.js "^11.5.1"
-    vue "^3.2.25"
-
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.npmmirror.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
@@ -6217,7 +6209,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npmmirror.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^3.2.25, vue@^3.4.27:
+vue@^3.4.27:
   version "3.4.27"
   resolved "https://registry.npmmirror.com/vue/-/vue-3.4.27.tgz#40b7d929d3e53f427f7f5945386234d2854cc2a1"
   integrity sha512-8s/56uK6r01r1icG/aEOHqyMVxd1bkYcSe9j8HcKtr/xTOFWvnzIVTehNW+5Yt89f+DLBe4A569pnZLS5HzAMA==
