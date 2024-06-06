@@ -5,7 +5,7 @@
 
       <v-navigation-drawer width="188">
         <v-list>
-          <v-list-item title="Welcome" nav to="/"></v-list-item>
+          <!-- <v-list-item title="Welcome" nav to="/"></v-list-item> -->
           <v-list-item title="Settings" nav to="/settings"></v-list-item>
           <v-list-item title="Completion" nav to="/completion"></v-list-item>
         </v-list>
