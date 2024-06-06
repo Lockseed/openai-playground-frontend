@@ -424,11 +424,12 @@ async function sendRequest() {
     return;
   }
 
-  let tools = [];
+  let tools = null;
   try {
-    tools = JSON.parse(toolsCode.value);
+    tools = toolsCode.value ? JSON.parse(toolsCode.value) : null;
+    tools = Array.isArray(tools) && tools.length !== 0 ? tools : null;
   } catch (error) {
-    showAlertDialog("Tools JSON is invalid.");
+    showAlertDialog("Invalid Tools. Should be a not empty Array.");
     return;
   }
 
@@ -436,27 +437,35 @@ async function sendRequest() {
   try {
     openaiMessages = formatMessagesForRequest()
   } catch (error) {
-    showAlertDialog("Parsing messages failed.");
+    showAlertDialog("Invalid messages.");
     return;
   }
 
   responseCode.value = "";
 
-  const apiResponse = await chatCompletionsV1({
-    apiKey: apiKey.value,
-    endPoint: endPoint.value,
-    data: {
-      model: modelName.value,
-      messages: openaiMessages,
-      temperature: Number(temperature.value),
-      top_p: Number(topP.value),
-      max_tokens: Number(maxTokens.value),
-      stream: false,
-      tools: tools,
-    }
-  });
+  try {
+    const apiResponse = await chatCompletionsV1({
+      apiKey: apiKey.value,
+      endPoint: endPoint.value,
+      data: {
+        model: modelName.value,
+        messages: openaiMessages,
+        temperature: Number(temperature.value),
+        top_p: Number(topP.value),
+        max_tokens: Number(maxTokens.value),
+        stream: false,
+        tools: tools,
+      }
+    });
 
-  responseCode.value = JSON.stringify(apiResponse, null, 2);
+    responseCode.value = JSON.stringify(apiResponse, null, 2);
+  } catch (error) {
+    let errMessage = error.message;
+    if (error.name === "AxiosError") {
+      errMessage = `${errMessage} ${error.response?.data?.error?.message}`
+    }
+    return window.alert(errMessage);
+  }
 }
 
 const dialogShown = ref(false);

@@ -3,8 +3,9 @@ import App from './App.vue'
 import router from './router'
 import { createPinia } from "pinia";
 import vuetify from './plugins/vuetify'
-import CodeEditor from "simple-code-editor";
 import { loadFonts } from './plugins/webfontloader'
+
+import CodeEditor from "@/components/SimpleCodeEditor/CodeEditor.vue";
 
 const pinia = createPinia()
 loadFonts()
